@@ -136,7 +136,7 @@ const drawKineticField = () => {
   for (let i = 0; i < bands; i += 1) {
     const progressValue = i / (bands - 1);
     const y = height * (0.14 + progressValue * 0.72);
-    const hueColor = i % 3 === 0 ? "18, 108, 103" : i % 3 === 1 ? "52, 92, 156" : "185, 77, 48";
+    const hueColor = i % 3 === 0 ? "118, 94, 64" : i % 3 === 1 ? "151, 126, 88" : "92, 82, 70";
     canvasContext.strokeStyle = `rgba(${hueColor}, ${0.08 + progressValue * 0.045})`;
     canvasContext.beginPath();
     for (let x = -40; x <= width + 40; x += 18) {
@@ -156,7 +156,7 @@ const drawKineticField = () => {
     const x = ((i * 97 + time * 0.38) % (width + 160)) - 80;
     const y = height * (0.12 + ((i * 37) % 100) / 125);
     const size = 2 + (i % 4);
-    canvasContext.fillStyle = `rgba(18, 108, 103, ${0.12 + (i % 5) * 0.025})`;
+    canvasContext.fillStyle = `rgba(118, 94, 64, ${0.1 + (i % 5) * 0.02})`;
     canvasContext.fillRect(x, y, size * 8, 1);
   }
 
